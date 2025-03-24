@@ -1,0 +1,10 @@
+{
+  "schema_id": "default",
+  "traits": {
+    "username": "david",
+    "name": {
+      "first": "David",
+      "last": "FILLON"
+    }
+  }
+}
