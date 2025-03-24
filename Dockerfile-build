@@ -1,0 +1,8 @@
+FROM golang:latest
+RUN useradd -Um build
+USER build
+WORKDIR /home/build/kratos
+RUN git clone https://github.com/ory/kratos.git $HOME/kratos
+ENV CGO_ENABLED=0
+RUN go mod download && go install . && strip /go/bin/kratos
+
