@@ -5,3 +5,9 @@ identity:
     url: file:///home/kratos/schemas/default.json
 selfservice:
   default_browser_return_url: http://192.168.0.53:4433
+  flows:
+    login:
+      ui_url: http://192.168.0.53/login
+serve:
+  public:
+    base_url: http://192.168.0.53/

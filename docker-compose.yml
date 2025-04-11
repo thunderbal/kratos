@@ -30,3 +30,13 @@ services:
     ports:
     - 4433:4433/tcp
     # - 4434:4434/tcp # Admin port not exposed
+
+  ui:
+    image: kratos-selfservice-ui-node
+    environment:
+      KRATOS_PUBLIC_URL: http://192.168.0.53:4433/
+      COOKIE_SECRET: bottleneck
+      CSRF_COOKIE_NAME: __HOST-192.168.0.53-x-csrf-token
+      CSRF_COOKIE_SECRET: kcenelttob
+    ports:
+    - 80:3000/tcp
